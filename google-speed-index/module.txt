@@ -1,0 +1,5 @@
+Module Title: Google Speed Index
+Course: Calculus I
+Applications: Dev Ops, Software Engineering
+Topic: Integration
+Prerequisites: Integrals of generalized polynomial functions

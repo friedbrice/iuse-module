@@ -1,0 +1,5 @@
+Module Title: Rocket Launch
+Course: Calculus I
+Applications: Classical Mechanics, Projectile Trajectory
+Topic: Antiderivatives
+Prerequisites: Piecewise Functions, Derivatives, Optimization

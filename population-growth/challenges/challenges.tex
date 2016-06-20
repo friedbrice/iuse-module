@@ -1,0 +1,88 @@
+\documentclass{letter}
+
+\usepackage[key]{fbtest}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\begin{document}
+
+    We are in charge of repairing the population of pandas in a nature
+    reserve in inland China.
+    The panda carrying capacity in our reserve is 165, but there
+    are currently only 5 pandas in the reserve.
+
+    The population is modeled by the logistics curve
+    \[
+      P(t) = \frac{165}{1 + 32 e^{-0.2t}}
+    \]
+    where $t$ is measured in years. (Take a moment to verify that the
+    current population $P(0)$ is indeed 5.)
+
+    We intend to reintroduce zoo-bred pandas to our reserve in order
+    to increase the population; however, if we
+    increase the panda population too quickly, then we risk causing an
+    ecological disaster that will destroy the reserve's ecosystem.
+
+    \begin{problem}{}
+      Find the rate of growth of the panda population.
+      About how many pandas can we expect to be born this year
+      (i.e. the year $t = 0$)?
+
+      \solution{
+        \begin{align*}
+          P(t) &= \frac{165}{1 + 32e^{-0.2t}} \\
+          P'(t) &= \frac{1056 e^{0.2 t}}{(e^{0.2 t} + 32)^2} \\
+          P'(0) &= 0.969...
+        \end{align*}
+
+        We can expect about one panda to be born this year.
+      }
+    \end{problem}
+
+    \begin{problem}{}
+      Find the time $t$ at which the population has the fastest
+      rate of growth.
+      (Remember that a logistics curve has its maximum rate of growth
+      when the population is at half the carrying capacity.)
+
+      \solution{
+        Since the carrying capacity is 165,
+        we need to solve $P(t) = 82.5$.
+
+        \begin{gather*}
+          \frac{165}{1 + 32 e^{-0.2t}} = 82.5 \\
+          t = 25 \ln(2) \\
+          t \approx 17.328
+        \end{gather*}
+      }
+    \end{problem}
+
+    \begin{problem}{}
+      Find the maximum rate of growth of the population.
+
+      \solution{
+        We found that the max rate of growth occurs at $t = 25\ln(2)$.
+
+        \begin{align*}
+
+        \end{align*}
+      }
+    \end{problem}
+
+    We can assume that the natural maximum rate of growth is a
+    ecologically safe growth rate.
+
+    \begin{problem}{}
+      How many pandas can we safely introduce to the reserve this year,
+      assuming that the zoo-bred pandas do not breed the first year?
+      (Remember, you need to account for the naturally-born offspring
+      of the 5 initial pandas.)
+    \end{problem}
+
+    \begin{problem}{}
+      After we introduce as many pandas as we can, what can we expect
+      the population to be one year from now? What will the rate of
+      growth be at that time?
+    \end{problem}
+
+\end{document}

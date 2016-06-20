@@ -1,0 +1,9 @@
+Module Title: Repairing the Panda Population
+Course: Calculus I
+Applications: Population dynamics, ecology
+Topic: Differentiation, Rates of Change
+Prerequisites:
+  Exponential and Logarithmic Functions,
+  Derivative of natural exponential function,
+  Quotient Rule,
+  Chain Rule
