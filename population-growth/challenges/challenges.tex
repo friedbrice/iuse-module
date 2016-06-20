@@ -50,6 +50,7 @@
         we need to solve $P(t) = 82.5$.
 
         \begin{gather*}
+          P(t) = 82.5
           \frac{165}{1 + 32 e^{-0.2t}} = 82.5 \\
           t = 25 \ln(2) \\
           t \approx 17.328
@@ -64,25 +65,57 @@
         We found that the max rate of growth occurs at $t = 25\ln(2)$.
 
         \begin{align*}
-
+          P'(t) &= \frac{1056 e^{0.2 t}}{(e^{0.2 t} + 32)^2} \\
+          P'(25\ln(2)) &= 8.25
         \end{align*}
+
+        So the max population growth rate is 8.25 pandas per year.
       }
     \end{problem}
 
-    We can assume that the natural maximum rate of growth is a
-    ecologically safe growth rate.
+    We can assume that the naturally-occurring maximum population growth
+    rate is an ecologically-safe rate at which to grow the panda population.
 
     \begin{problem}{}
       How many pandas can we safely introduce to the reserve this year,
       assuming that the zoo-bred pandas do not breed the first year?
       (Remember, you need to account for the naturally-born offspring
       of the 5 initial pandas.)
+
+      \solution{
+        One panda will be born in the wild, so we can safely introduce
+        7 more pandas without exceeding the maximum growth rate of 8.25.
+      }
     \end{problem}
 
     \begin{problem}{}
       After we introduce as many pandas as we can, what can we expect
       the population to be one year from now? What will the rate of
-      growth be at that time?
+      growth be at that time? How many pandas can we safely introduce
+      at that time?
+
+      \solution{
+        Next year, we will have $5 + 1 + 7 = 13$ pandas.
+
+        Our model $P(t)$ is now inaccurate. $P(1) = 6$ and
+        $P'(1) = 1.168...$ no longer reflect our current situation.
+        By introducing 7 pandas last year, we have essentially moved
+        the population curve forward in time. We can calculate the
+        growth rate for next year by finding the point on the graph
+        where $P(t) = 13$ and finding $P'(t)$ there.
+
+        \begin{gather*}
+          P(t) = 13 \\
+          \frac{165}{1 + 32e^{-0.2t}} = 13 \\
+          t = 5 (2 \ln(2) + \ln(13) - \ln(19)) \\
+          t \approx 5.034 \\
+          P'(5.034) \approx 2.395
+        \end{gather*}
+
+        We find that between 2 and 3 pandas will be born that year, so
+        we can safely introduce 6 additional pandas without exceeding
+        the natural max of 8.25.
+      }
     \end{problem}
 
 \end{document}
