@@ -1,6 +1,8 @@
 \documentclass{letter}
 
 \usepackage[key]{fbtest}
+\usepackage{fbpicture}
+\usepackage{standalone}
 \usepackage{amsmath}
 \usepackage{graphicx}
 
@@ -30,7 +32,7 @@
 
       \solution{
         \begin{center}
-          \includegraphics{nopic}
+          \includegraphics[width=0.5\textwidth]{graphic1.png}
         \end{center}
       }
     }
@@ -52,14 +54,14 @@
 
   \begin{problem}{}
     Our engineers must design a loading function $L(t)$, and they must
-    optimally decide between two tradeoffs as follows. Our loading
+    optimally decide between two trade-offs as follows. Our loading
     function $L(t)$ is piecewise linear with one segment connecting
     $(0,0)$ and $\left( \frac{1}{3x}, \frac{1}{2} \right)$ and with the
     other segment connecting $\left( \frac{1}{3x}, \frac{1}{2} \right)$
     and $(x,1)$ (illustrated below).
 
     \begin{center}
-      \includegraphics{nopic}
+      \input{graphic2}
     \end{center}
 
     Notice that choosing a large value for $x$ will speed up the loading
