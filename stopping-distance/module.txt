@@ -1,0 +1,5 @@
+Module Title: Stopping Distance
+Course: Calculus I
+Applications: Classical Mechanics, Automotive Engineering
+Topic: Initial-value problems
+Prerequisites: Derivatives and antiderivatives of polynomials, piecewise functions
