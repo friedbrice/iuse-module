@@ -9,24 +9,91 @@
   \begin{problem}{}
     Our car is travelling at a constant velocity of 30 m/s when we spot
     a priceless painting on the road 100 m in front of us! We apply the
-    brakes, giving our car an acceleration of $-$5 m/s^2.
+    brakes, giving our car an acceleration of $-$5 m/s\textsuperscript{2}.
 
     Putting our initial position as 0 m and the position of the painting
     as 100 m, find our position when the car comes to a stop (i.e., when
     velocity is 0). Did we save the painting?
+
+    \solution{
+      \begin{align*}
+        a(t) &= -5 \\
+        v(t) &= -5t + v_0 \\
+        &= -5t + 30 \\
+        x(t) &= -2.5t^2 + 30t + x_0 \\
+        &= -2.5t^2 + 30t
+      \end{align*}
+
+      The car comes to a stop when $v(t) = 0$.
+
+      \begin{gather*}
+        0 = v(t) \\
+        0 = -5t + 30 \\
+        t = 6
+      \end{gather*}
+
+      We need to know if we hit the painting (which is at position 100).
+      We calculate the car's position when it stops.
+
+      \begin{gather*}
+        x(t) = -2.5t^2 + 30t \\
+        x(6) = 90
+      \end{gather*}
+
+      We stopped at position 90, so we saved the painting!
+    }
   \end{problem}
 
   \begin{problem}{}
     We are designing a car, and we need to ensure that it has a stopping
     distance of 50 m when traveling at a speed of 25 m/s. How much
     acceleration must the brakes be designed to provide?
+
+    \solution{
+      \begin{align*}
+        a(t) &= -A \\
+        v(t) &= -At + v_0 \\
+        &= -At + 25 \\
+        x(t) &= -\frac{A}{2} t^2 + 25t + x_0 \\
+        &= -\frac{A}{2} t^2 + 25t
+      \end{align*}
+
+      We need to find the time $t$ when the velocity is zero.
+
+      \begin{gather*}
+        0 = v(t) \\
+        0 = -At + 25 \\
+        t = \frac{25}{A}
+      \end{gather*}
+
+      Our car stops at time $t = \frac{25}{A}$. We need to see how far
+      it goes.
+
+      \begin{align*}
+        x(t) &= -\frac{A}{2} t^2 + 25t \\
+        x \left( \frac{25}{A} \right)
+        &= -\frac{A}{2} \left( \frac{25}{A} \right)^2 + 25\left( \frac{25}{A} \right) \\
+        &= \frac{625}{2A}
+      \end{align*}
+
+      So our stopping distance is $\frac{652}{2A}$. On the other hand,
+      we need our stopping distance to be 50 m. Equate, and solve for $A$.
+
+      \begin{gather*}
+        50 = \frac{625}{A} \\
+        A = 6.25
+      \end{gather*}
+
+      We need our brakes to be able to apply $-6.25$ m/s\textsuperscript{2}
+      of acceleration.
+    }
   \end{problem}
 
   \begin{problem}{}
-    Our car has brakes that can provide $-$6 m/s^2 acceleration. Find
-    the stopping distance as a function of velocity, and find the
-    velocity at which the stopping distance becomes 100 m (give your
-    answer in m/s and correct to 2 decimal places).
+    Our car has brakes that can provide $-$6 m/s\textsuperscript{2}
+    acceleration. Find the stopping distance as a function of velocity,
+    and find the velocity at which the stopping distance becomes 100 m
+    (give your answer in m/s and correct to 2 decimal places).
   \end{problem}
 
 \end{document}
