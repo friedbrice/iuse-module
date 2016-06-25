@@ -91,9 +91,55 @@
 
   \begin{problem}{}
     Our car has brakes that can provide $-$6 m/s\textsuperscript{2}
-    acceleration. Find the stopping distance as a function of velocity,
-    and find the velocity at which the stopping distance becomes 100 m
-    (give your answer in m/s and correct to 2 decimal places).
+    acceleration. Find the stopping distance as a function of velocity.
+    Find the velocity at which the stopping distance becomes 100 m,
+    and find the velocity at which the stopping distance becomes 200 m
+    (give your answers in m/s and correct to 2 decimal places).
+
+    \solution{
+      We know that our acceleration is $-6$.
+      Our initial velocity is unknown, so we give it a symbol, say $v_0$.
+
+      We need to find the time $t^*$ when our car stops
+      (\emph{i.e.}, when the velocity equals $0$)
+      and the distance we travel before stopping (in terms of $v_0$).
+
+      \begin{align*}
+        a(t) &= -6 \\
+        v(t) &= -6 t + v_0 \\
+        x(t) &= -3 t^2 + v_0 t \\
+      \end{align*}
+
+      Set $0 = v(t^*)$ and solve for $t^*$.
+
+      \begin{gather*}
+        0 = v(t^*) \\
+        0 = -6 t^* + v_0 \\
+        t^* = \frac{v_0}{6}
+      \end{gather*}
+
+      So our car stops at time $t^* = \frac{v_0}{6}$.
+      Our stopping distance is $x(t^*)$.
+
+      \begin{align*}
+        x(t^*) &= -3 (t^*)^2 + v_0 t^* \\
+        &= \frac{1}{9}{v_0}^2
+      \end{align*}
+
+      So our stopping distance in terms of our velocity $v_0$
+      is $\frac{1}{9}{v_0}^2$.
+
+      We need to find the velocities that result in stopping
+      distances of 100 m and 200 m, respectively.
+
+      \begin{align*}
+        x(t^*) &= 100 &\Longrightarrow & & v_0 &= 30 \\
+        x(t^*) &= 200 &\Longrightarrow & & v_0 &= 42.42
+      \end{align*}
+
+      Notice that increasing our speed a relatively small
+      amount doubles our stopping distance.
+    }
   \end{problem}
 
 \end{document}
