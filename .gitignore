@@ -3,3 +3,8 @@
 *.fls
 *.log
 *.synctex.gz
+*.nav
+*.out
+*.run.xml
+*.snm
+*.toc

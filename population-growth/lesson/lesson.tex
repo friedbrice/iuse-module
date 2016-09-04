@@ -1,0 +1,153 @@
+\documentclass[10pt,aspectratio=1610,xcolor={dvipsnames}]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{standalone}
+\usepackage{fbpicture}
+\usepackage{microtype}
+\usepackage{amsmath, amssymb}
+
+\usefonttheme[onlymath]{serif}
+
+\title{Panda Population Growth}
+
+\begin{document}
+
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \begin{frame}{Meet the Logistics Curve Family}
+
+    \begin{center}
+      \scalebox{0.75}{\input{graphic1.tex}}
+    \end{center}
+
+    \begin{columns}
+
+      \column{0.5\textwidth}
+      \begin{center}
+        A \emph{logistics curve} is a function
+        \[
+          f(t) = \frac{A}{1 + Be^{-Ct}}
+        \]
+        where $A$, $B$, and $C$ are constants.
+      \end{center}
+
+      \column{0.5\textwidth}
+      The important properties are:
+
+      \begin{itemize}
+        \item{$f(t) \to A$ as $t \to \infty$}
+        \item{$f(t) \to 0$ as $t \to -\infty$}
+        \item{concave up when $f(t) < A / 2$}
+        \item{concave down when $f(t) > A / 2$}
+        \item{max growth rate when $f(t) = A / 2$}
+      \end{itemize}
+
+    \end{columns}
+
+  \end{frame}
+
+  \begin{frame}{Logistics Curves Model Population Growth}
+
+    \begin{columns}
+
+      \column{0.5\textwidth}
+      \begin{center}
+        \scalebox{0.65}{\input{graphic1.tex}}
+      \end{center}
+
+      \column{0.5\textwidth}
+      \begin{center}
+        Population growth is an important topic of study in the subfield of Biology called \emph{Ecology}.
+        \[
+          f(t) = \frac{A}{1 + Be^{-Ct}}
+        \]
+        Logistics curves are useful for modeling population growth.
+      \end{center}
+
+    \end{columns}
+
+    \begin{itemize}
+      \item{$f(t)$ represents the number of individuals living at time $t$.}
+      \item{$A$ represents the \emph{carrying capacity} (the maximum number of individuals that the environment can support).}
+      \item{When $f(t) < A / 2$, resources are plentiful, and the population growth rate increases.}
+      \item{When $f(t) > A / 2$, resources are scarce, and competition for resources drives the population growth rate down.}
+    \end{itemize}
+
+  \end{frame}
+
+  \begin{frame}{Example: The Mountain Lions in Yosemite}
+
+    \begin{columns}
+
+      \column{0.5\textwidth}
+      A scientist is modeling the population of mountain lions in Yosemite National Park using a logistics curve with $t$ measured in years and $t=0$ corresponding to 2000.
+      \[
+        f(t) = \frac{A}{1 + Be^{-Ct}}
+      \]
+      Through observation and data analysis, she has determined that the constants $A = 4000$, $B = 10$, and $C = 0.12$ are a good fit for her observed data.
+
+      \column{0.5\textwidth}
+      Use your calculator to plot the model from $t = 0$ to $t = 50$.
+
+      Now take a few minutes to answer the following:
+
+      \begin{enumerate}
+        \item{What is the carrying capacity for this population?} % 4000
+        \item{At what population level will the growth rate be the highest?} % 2000
+        \item{At what time will the growth rate be the highest?} % t = 2019.188
+        \item{What is the maximum growth rate (and what unit is that in)?} % 120 ml / yr
+      \end{enumerate}
+
+    \end{columns}
+
+  \end{frame}
+
+  \begin{frame}{Solution: The Mountain Lions in Yosemite}
+
+    \begin{columns}
+
+      \column{0.5\textwidth}
+      \begin{enumerate}
+        \item{
+          $A$ represents the carrying capacity, so the carrying capacity is 4000.
+        }
+        \item{
+          The logistics curve has it's fastest rate of growth when $f(t)$ is $A / 2$, so the population will have the highest growth rate when there are 2000 mountain lions.
+        }
+        \item{
+          We need to find the value of $t$ when $f(t) = 2000$.
+          \begin{align*}
+            2000 &= \frac{4000}{1 + 10e^{-0.12t}} \\
+            1 + 10e^{-0.12t} &= 2 \\
+            e^{-0.12t} &= 0.1 \\
+            -0.12t &= \ln(0.1) \\
+            t &= \frac{\ln(0.1)}{-0.12} \\
+            t &\approx 19.188
+          \end{align*}
+        }
+      \end{enumerate}
+
+      \column{0.5\textwidth}
+      \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item{
+          Since $f(t)$ tells us the population, the derivative $f'(t)$ will tell us the growth rate of the population.
+          \begin{align*}
+            f(t) &= \frac{4000}{1 + 10e^{-0.12t}} \\
+            f'(t) &= \frac{d}{dt} \frac{4000}{1 + 10e^{-0.12t}} \\
+            f'(t) &= \frac{0 - 4000(-1.2e^{-0.12t})}{(1 + 10e^{-0.12t})^2} \\
+            f'(t) &= \frac{4800e^{-0.12t}}{(1 + 10e^{-0.12t})^2} \\
+            f'(19.188...) &= 120
+          \end{align*}
+          Since $f(t)$ is mountain lions in terms of time (in years), $f'(t)$ is mountain lions per year.
+        }
+      \end{enumerate}
+
+    \end{columns}
+
+  \end{frame}
+
+\end{document}

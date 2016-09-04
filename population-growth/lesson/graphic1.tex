@@ -1,0 +1,28 @@
+% DESCRIPTION:
+% KEYWORDS:
+\documentclass[border=0.5in]{standalone}
+
+\usepackage{fbpicture}
+
+\begin{document}
+    \linethickness{0.5pt}
+  \begin{fbpic}{-2}{8}{-1}{4}
+    % axes
+    \put(0,-1){\vector(0,1){5}}
+    \put(-2,0){\vector(1,0){10}}
+    % dots
+    \multiput(-0.1,3)(0.4,0){21}{\line(1,0){0.2}}
+    \multiput(-0.1,1.5)(0.4,0){8}{\line(1,0){0.2}}
+    % points
+    \put(3.1,1.5){\circle*{0.1}}
+    % labels
+    \put(8.1,-0.1){$t$}
+    \put(-0.2,4.1){$f(t)$}
+    \put(-0.4,2.9){$A$}
+    \put(-0.8,1.4){$A/2$}
+    % graph
+    \linethickness{1pt}
+    \qbezier(3.1,1.5)(1.9,0.1)(-2,0.1)
+    \qbezier(3.1,1.5)(4.3,2.9)(8,2.9)
+  \end{fbpic}
+\end{document}
