@@ -1,0 +1,43 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fbpicture}[2015/09/26 FBPicture Package]
+
+\RequirePackage{pict2e}
+\RequirePackage{color}
+\RequirePackage[dvipsnames]{xcolor}
+
+\newenvironment{fbpic}[4]{
+% four arguments
+% #1 is x min
+% #2 is x max
+% #3 is y min
+% #4 is y max
+  \newcommand{\xmin}{#1}
+  \newcommand{\xmax}{#2}
+  \newcommand{\ymin}{#3}
+  \newcommand{\ymax}{#4}
+  \newcommand{\xspan}{\numexpr \xmax - \xmin \relax}
+  \newcommand{\yspan}{\numexpr \ymax - \ymin \relax}
+  \setlength{\unitlength}{1cm}
+  \begin{picture}(\numexpr\xspan+1\relax,\numexpr\yspan+1\relax)(\xmin,\ymin)
+}{
+  \end{picture}
+}
+
+\newcommand{\putframe}{
+  \put(\xmin,\ymin){\line(1,0){\xspan}}
+  \put(\xmin,\ymin){\line(0,1){\yspan}}
+  \put(\xmax,\ymax){\line(-1,0){\xspan}}
+  \put(\xmax,\ymax){\line(0,-1){\yspan}}
+}
+
+\newcommand{\putgridlines}{
+  \multiput(\xmin,\ymin)(0,1){\numexpr\yspan+1\relax}{\line(1,0){\xspan}}
+  \multiput(\xmin,\ymin)(1,0){\numexpr\xspan+1\relax}{\line(0,1){\yspan}}
+}
+
+\newcommand{\putaxes}[2][]{
+  \put(\xmin, 0){\vector(1, 0){\xspan}}
+  \multiput(\numexpr\xmin+1\relax, -0.1)(1, 0){\numexpr\xspan-1\relax}{\line(0, 1){0.2}}
+  \put(0, \ymin){\vector(0, 1){\yspan}}
+  \multiput(-0.1,\numexpr\ymin+1\relax)(0, 1){\numexpr\yspan-1\relax}{\line(1, 0){0.2}}
+}

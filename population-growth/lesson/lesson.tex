@@ -19,31 +19,30 @@
 
   \begin{frame}{Meet the Logistics Curve Family}
 
-    \begin{center}
+    \begin{figure}
       \scalebox{0.75}{\input{graphic1.tex}}
-    \end{center}
+    \end{figure}
 
     \begin{columns}
 
       \column{0.5\textwidth}
-      \begin{center}
-        A \emph{logistics curve} is a function
+      \begin{block}{Logistics Curve}
         \[
           f(t) = \frac{A}{1 + Be^{-Ct}}
         \]
-        where $A$, $B$, and $C$ are constants.
-      \end{center}
+        ($A$, $B$, $C$ are constants)
+      \end{block}
 
       \column{0.5\textwidth}
-      The important properties are:
-
-      \begin{itemize}
-        \item{$f(t) \to A$ as $t \to \infty$}
-        \item{$f(t) \to 0$ as $t \to -\infty$}
-        \item{concave up when $f(t) < A / 2$}
-        \item{concave down when $f(t) > A / 2$}
-        \item{max growth rate when $f(t) = A / 2$}
-      \end{itemize}
+      \begin{block}{Important Properties}
+        \begin{itemize}
+          \item{$f(t) \to A$ as $t \to \infty$}
+          \item{$f(t) \to 0$ as $t \to -\infty$}
+          \item{concave up when $f(t) < A / 2$}
+          \item{concave down when $f(t) > A / 2$}
+          \item{max growth rate when $f(t) = A / 2$}
+        \end{itemize}
+      \end{block}
 
     \end{columns}
 
@@ -54,27 +53,29 @@
     \begin{columns}
 
       \column{0.5\textwidth}
-      \begin{center}
-        \scalebox{0.65}{\input{graphic1.tex}}
-      \end{center}
+      \begin{figure}
+        \scalebox{0.6}{\input{graphic1.tex}}
+      \end{figure}
 
       \column{0.5\textwidth}
-      \begin{center}
-        Population growth is an important topic of study in the subfield of Biology called \emph{Ecology}.
-        \[
-          f(t) = \frac{A}{1 + Be^{-Ct}}
-        \]
-        Logistics curves are useful for modeling population growth.
-      \end{center}
+      \begin{block}{Ecology}
+        \begin{itemize}
+          \item{Subfield of Biology}
+          \item{Studies population growth, especially as it relates to environment/ecosystem}
+          \item{Logistics curves useful for modeling population growth}
+        \end{itemize}
+      \end{block}
 
     \end{columns}
 
-    \begin{itemize}
-      \item{$f(t)$ represents the number of individuals living at time $t$.}
-      \item{$A$ represents the \emph{carrying capacity} (the maximum number of individuals that the environment can support).}
-      \item{When $f(t) < A / 2$, resources are plentiful, and the population growth rate increases.}
-      \item{When $f(t) > A / 2$, resources are scarce, and competition for resources drives the population growth rate down.}
-    \end{itemize}
+    \begin{block}{Logistics Curve as a Model}
+      \begin{itemize}
+        \item{$f(t)$, number of individuals living at time $t$}
+        \item{$A$, the \emph{carrying capacity} (the max number of individuals the environment can support)}
+        \item{when $f(t) < A / 2$, resources are plentiful, rate of population growth increases}
+        \item{when $f(t) > A / 2$, resources are scarce, competition drives rate of population growth down}
+      \end{itemize}
+    \end{block}
 
   \end{frame}
 
@@ -83,23 +84,27 @@
     \begin{columns}
 
       \column{0.5\textwidth}
-      A scientist is modeling the population of mountain lions in Yosemite National Park using a logistics curve with $t$ measured in years and $t=0$ corresponding to 2000.
-      \[
-        f(t) = \frac{A}{1 + Be^{-Ct}}
-      \]
-      Through observation and data analysis, she has determined that the constants $A = 4000$, $B = 10$, and $C = 0.12$ are a good fit for her observed data.
+      \begin{block}{Situation}
+        A scientist is modeling the population of mountain lions in Yosemite National Park using a logistics curve with $t$ measured in years and $t=0$ corresponding to 2000.
+        \[
+          f(t) = \frac{A}{1 + Be^{-Ct}}
+        \]
+        Through observation and data analysis, she has determined that the constants $A = 4000$, $B = 10$, and $C = 0.12$ are a good fit for her observed data.
+      \end{block}
 
       \column{0.5\textwidth}
-      Use your calculator to plot the model from $t = 0$ to $t = 50$.
+      \begin{block}{Questions}
+        Use your calculator to plot the model from $t = 0$ to $t = 50$.
 
-      Now take a few minutes to answer the following:
+        Now take a few minutes to answer the following questions about the model:
 
-      \begin{enumerate}
-        \item{What is the carrying capacity for this population?}
-        \item{At what population level will the growth rate be the highest?}
-        \item{At what time will the growth rate be the highest?}
-        \item{What is the maximum growth rate (and what unit is that in)?}
-      \end{enumerate}
+        \begin{enumerate}
+          \item{What is the carrying capacity for this population?}
+          \item{At what population level will the growth rate be the highest?}
+          \item{At what time will the growth rate be the highest?}
+          \item{What is the maximum growth rate (and what unit is that measured in)?}
+        \end{enumerate}
+      \end{block}
 
     \end{columns}
 
